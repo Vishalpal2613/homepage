@@ -3,27 +3,38 @@ import { Box } from '@mui/material';
 import ContentItem from './ContentItem';
 
 
-const contentArray = [{title: "Get Things Done", description: "Lightwight but powrful source code editor runs on your desktop",
+const contentArray = [{
+  title: "Get Things Done",
+  description: "Lightwight but powrful source code editor runs on your desktop and is available for Windows, macOS and Linux. it comes with built-in support for JavaScript,  TypeScript and Node.",
   img: "/1.jpg",
 },
-{title: "Productivity Is Briliant", 
-  description: "",
+{
+  title: "Productivity Is Briliant",
+  description: "Lightwight but powrful source code editor runs on your desktop and is available for Windows, macOS and Linux. it comes with built-in support for JavaScript, TypeScript and Node.",
   img: "/2.jpg",
 },
-{title: "Fast Development", 
-  description: "",
+{
+  title: "Fast Development",
+  description: "Lightwight but powrful source code editor runs on your desktop and is available for Windows, macOS and Linux. it comes with built-in support for JavaScript, TypeScript and Node.",
   img: "/3.jpg",
 }
 ]
 const Content = () => {
   return (
-    <Box bgcolor="#fbf2f2" 
-    display={'flex'} 
-    justifyContent={'center'} 
-    flexDirection={'column'} 
-    width="100%" 
-    height={"10%"}>
-      {contentArray.map((cont, index)=>(<ContentItem title={cont.title} description={cont.description} img={cont.img} key={index}/>))}
+    <Box bgcolor="#fbf2f2"
+      display={'flex'}
+      justifyContent={'center'}
+      flexDirection={'column'}
+      textAlign={'center'}
+      width="100%"
+      height={"10%"}>
+      {contentArray.map((cont, index) => (
+        <ContentItem title={cont.title}
+          description={cont.description}
+          img={cont.img} key={index}
+          swap={index % 2 === 0}
+        />
+      ))}
     </Box>
   )
 }
