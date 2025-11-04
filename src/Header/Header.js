@@ -6,7 +6,7 @@ import ApiIcon from '@mui/icons-material/Api';
 const links = ["Products", "Solutions", "Pricing", "Enterprise"];
 const Header = () => {
   return (
-    <AppBar sx={{ bgcolor: "transparent", boxShadow: "0" }}>
+    <AppBar sx={{ bgcolor: "transparent", boxShadow: "0", position:'sticky' }}>
       <Toolbar>
         <Box sx={{ display: "flex", width: "100%", alignItems: "center" }}>
           <ApiIcon sx={{ color: "black" }} />
